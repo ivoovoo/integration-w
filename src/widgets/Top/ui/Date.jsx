@@ -2,23 +2,25 @@ import React, { useMemo, useState } from "react";
 import Calendar from "react-calendar";
 
 import "react-calendar/dist/Calendar.css";
+import { useLocation } from "react-router-dom";
+import { getDateString } from "../../../shared/lib/getDate/getDate";
 
-const Date = ({value,setValue}) => {
+const Date = ({ value, setValue }) => {
+  const location = useLocation();
+  const queryString = location.search;
 
-  const [show, setShow] = useState(false);
-  const date = useMemo(() => value.getDate(), [value]);
-  const month = useMemo(() => value.getMonth() + 1, [value]);
+  const params = new URLSearchParams(queryString);
+
+  const [show, setShow] = useState(params.get("date") == "open");
+
   return (
     <div className="top__date">
-      <button
-        className="top__date-button"
-        onClick={() => setShow((s) => !s)}
-      >{`${date < 9 ? "0" + date : date}.${
-        month < 9 ? "0" + month : month
-      }.${value.getFullYear()}`}</button>
+      <button className="top__date-button" onClick={() => setShow((s) => !s)}>
+        {getDateString(value)}
+      </button>
       {show && (
         <Calendar
-          className={"top__calendar"}
+          className={"calendar"}
           onChange={setValue}
           value={value}
         />

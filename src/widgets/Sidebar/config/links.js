@@ -16,7 +16,7 @@ export const links = [
     value: <>Дизайн  <span> человека</span></>,
   },{
     icon:"",
-    path:'/',
+    path:'/?date=open',
     value:"NEW",
     mobile:true
   },

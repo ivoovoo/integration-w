@@ -1,10 +1,10 @@
 .users {
     padding: 16px 72px 16.63px 40px;
     border-bottom: 1px solid var(--secondary-color);
+    position: fixed;
     display: flex;
     justify-content: space-between;
     gap: 0 100px;
-    position: fixed;
     top: 0;
     right: 0;
     width: calc(100% - 310px);
@@ -12,26 +12,17 @@
 }
 
 .users__all {
-    display: flex;
-    align-items: center;
-    gap: 0 10px;
-    overflow-x: scroll;
-    padding: 1px;
-    padding-bottom: 4px;
+    flex-grow: 1;
 }
 
 .users__all::-webkit-scrollbar {
-    padding-top: 5px;
-    margin-top: 5px;
-    height: 6px;
-    background-color: var(--background-color);
-    border-radius: 2px;
+    display: none;
 }
 
 
-.users__all::-webkit-scrollbar-thumb {
-    background: var(--scroll-track-thumb);
-    border-radius: 2px;
+.users__item {
+    max-width: 60.64px;
+    max-height: 60.64px;
 }
 
 .users__button {
@@ -43,14 +34,20 @@
     font-size: 28px;
 }
 
+
 .users__button.active {
-    outline: #FFD079 1px solid ;
+    border: #FFD079 1px solid;
 }
+
+.users__main {
+    flex-shrink: 0;
+}
+
 .users__photo {
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    flex-shrink: 0;
+
 }
 
 @media (max-width:1350px) {

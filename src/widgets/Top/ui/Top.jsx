@@ -3,11 +3,12 @@ import Button from "../../../shared/ui/Button/Button";
 import DateC from "./Date";
 
 import "./Top.css";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const Top = () => {
   const [value, setValue] = useState(new Date("01.02.2003"));
   const navigate = useNavigate();
+
   const handleClick = () => {
     navigate('matrix-of-fate?_date=' + value.toDateString());
   };

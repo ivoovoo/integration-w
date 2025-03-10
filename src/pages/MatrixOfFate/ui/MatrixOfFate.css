@@ -24,6 +24,9 @@
     width: 137px;
 }
 
+.fate__birthday-wrapper {
+    position: relative;
+}
 
 .fate__birthday {
     width: 220px;
@@ -126,4 +129,3 @@
     }
 
 }
-

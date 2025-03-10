@@ -31,6 +31,9 @@
     width: 137px;
 }
 
+.matrix__birthday-wrapper {
+    position: relative;
+}
 
 .matrix__birthday {
     width: 220px;

@@ -46,6 +46,14 @@ body {
     max-width: 1380px;
 }
 
+.calendar {
+    position: absolute;
+    color: #444;
+    z-index: 20;
+    bottom: -15px;
+    transform: translateY(100%);
+}
+
 @media (max-width:1350px) {
     .row {
         padding-bottom: 120px;
