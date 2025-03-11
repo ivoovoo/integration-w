@@ -25,11 +25,12 @@
 }
 
 .fate__birthday-wrapper {
+    width: 220px;
     position: relative;
 }
 
 .fate__birthday {
-    width: 220px;
+    width: 100%;
     border: 1px solid var(--primary-color);
     font-family: "Futura";
     color: var(--secondary-color);
@@ -111,6 +112,10 @@
         padding: 12px;
         width: 100%;
         flex-grow: 1;
+    }
+
+    .fate__birthday-wrapper {
+        width: 100%;
     }
 
     .fate__text {

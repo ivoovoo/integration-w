@@ -4,7 +4,7 @@
 
 body {
     font-family: "Open Sans";
-
+    touch-action: none;
 }
 
 
@@ -48,11 +48,13 @@ body {
 }
 
 .calendar {
+    min-width: 280px;
     position: absolute;
     color: #444;
     z-index: 20;
     bottom: -15px;
-    transform: translateY(100%);
+    left: 50%;
+    transform: translate(-50%,100%);
 }
 
 @media (max-width:1350px) {
@@ -85,5 +87,11 @@ body {
 
     .row {
         padding-bottom: 250px;
+    }
+}
+
+@media (max-width:480px) {
+    .calendar {
+        min-width: 220px;
     }
 }
