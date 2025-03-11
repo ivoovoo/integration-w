@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import Button from "../../../shared/ui/Button/Button";
 import DateC from "./Date";
+import {  useNavigate } from "react-router-dom";
 
 import "./Top.css";
-import { useLocation, useNavigate } from "react-router-dom";
 
 const Top = () => {
-  const [value, setValue] = useState(new Date("01.02.2003"));
+  const [value, setValue] = useState(new Date(2003, 1, 1));
   const navigate = useNavigate();
 
   const handleClick = () => {

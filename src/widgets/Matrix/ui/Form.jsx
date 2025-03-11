@@ -4,7 +4,7 @@ import { getDateString } from "../../../shared/lib/getDate/getDate";
 
 const Form = () => {
   const [show, setShow] = useState(false);
-  const [date, setDate] = useState(new Date("06.19.2000"));
+  const [date, setDate] = useState(new Date(2003, 1, 1));
   return (
     <form className="matrix__form">
       <input className="matrix__form-name" placeholder="Имя" />

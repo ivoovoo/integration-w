@@ -1,9 +1,9 @@
-import React, { useMemo, useState } from "react";
+import React, { useState } from "react";
 import Calendar from "react-calendar";
-
-import "react-calendar/dist/Calendar.css";
 import { useLocation } from "react-router-dom";
 import { getDateString } from "../../../shared/lib/getDate/getDate";
+
+import "react-calendar/dist/Calendar.css";
 
 const Date = ({ value, setValue }) => {
   const location = useLocation();
