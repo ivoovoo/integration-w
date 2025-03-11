@@ -5,7 +5,7 @@ import { getDateString } from "../../../shared/lib/getDate/getDate";
 const Form = () => {
   const [show, setShow] = useState(false);
   const [date, setDate] = useState(new Date("06.19.2000"));
-  console.log(date);
+  
   return (
     <form className="fate__form">
       <input className="fate__form-name" placeholder="Имя" />

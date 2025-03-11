@@ -8,6 +8,7 @@
     top: 0;
     right: 0;
     width: calc(100% - 310px);
+    z-index: 100;
     background-color: var(--page-background);
 }
 

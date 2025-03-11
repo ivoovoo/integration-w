@@ -7,9 +7,9 @@ import { buttonsConfig } from "../config/buttons";
 import "./MatrixOfFate.css";
 
 const MatrixOfFate = () => {
-
   const [buttons, setButtons] = useState(buttonsConfig)
   const active = buttons.find(item => item.active)
+  
   return (
     <section className="fate">
       <Form />

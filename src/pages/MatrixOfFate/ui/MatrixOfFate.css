@@ -30,12 +30,10 @@
 
 .fate__birthday {
     width: 220px;
-    border: .5px solid var(--primary-color);
+    border: 1px solid var(--primary-color);
     font-family: "Futura";
     color: var(--secondary-color);
 }
-
-
 
 .fate__form-name span {
     color: var(--secondary-color);
@@ -44,13 +42,12 @@
 .fate__form-name {
     width: 151px;
     text-align: start;
-    border: .5px solid var(--primary-color);
+    border: 1px solid var(--primary-color);
 }
 
 .fate__name::placeholder {
     color: var(--primary-color);
 }
-
 
 .fate__content {
     display: flex;
@@ -87,7 +84,6 @@
 
 
 @media (max-width:1050px) {
-
     .fate__content {
         flex-direction: column;
         align-items: flex-start;
@@ -96,13 +92,11 @@
     .fate__scheme {
         padding: 20px;
         margin: 30px auto 0;
-
     }
 
     .fate__wrapper {
         max-width: 100%;
     }
-
 }
 
 @media (max-width:768px) {
@@ -127,5 +121,4 @@
     .fate__title.title {
         font-size: 25px;
     }
-
 }

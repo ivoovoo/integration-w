@@ -1,7 +1,7 @@
 import React from "react";
+import Sprite from "../../../shared/ui/Sprite/Sprite";
 import { NavLink } from "react-router-dom";
 import { classNames } from "../../../shared/lib/classNames/classNames";
-import Sprite from "../../../shared/ui/Sprite/Sprite";
 import { links } from "../config/links";
 
 import "./Sidebar.css";

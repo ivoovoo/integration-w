@@ -4,6 +4,8 @@
     min-height: 100vh;
     padding: 22.5px 0 22.5px;
     border-right: 0.5px var(--secondary-color) solid;
+    position: fixed;
+    left: 0;
 }
 
 .sidebar__title {
@@ -47,16 +49,26 @@
 @media (max-width:1350px) {
 
     .sidebar {
-        position: fixed;
         bottom: 10px;
         left: 1%;
         width: 98%;
         min-height: auto;
-        background-color: rgba(68, 68, 86, 0.826);
-        border-radius: 30px;
         z-index: 100;
         padding: 10px;
         border: none;
+    }
+
+    .sidebar::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        border-radius: 30px;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background-color: rgba(68, 68, 86, 0.826);
+        z-index: -1;
+        backdrop-filter: blur(5px);
     }
 
     .sidebar__title {
@@ -78,7 +90,8 @@
     }
 
     .sidebar__link {
-        height: 100px;justify-content: center;
+        height: 40px;
+        justify-content: center;
         padding: 18px 8px;
         font-size: 14px;
         border-radius: 20px;
