@@ -1,12 +1,23 @@
 .header {
     width: 100%;
     padding: 32px 0 25px;
-    position: absolute;
-    background-color: var(--header-background);
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 100;
+}
+
+.header::after {
+    content: '';
+    position: absolute;
+    background-color: var(--header-background);
+    backdrop-filter: blur(10px);
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    bottom: 0;
 }
 
 .header__inner {
