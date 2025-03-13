@@ -1,5 +1,4 @@
 .top {
-    /* overflow: hidden; */
     padding-top: 180px;
     padding-bottom: 110px;
     position: relative;
@@ -44,7 +43,6 @@
     margin-top: 71px;
     display: flex;
     gap: 0 31px;
-
 }
 
 .top__date-button {
@@ -73,11 +71,6 @@
     backdrop-filter: blur(10px);
     z-index: -1;
 }
-
-.top__date {
-    position: relative;
-}
-
 
 
 .top__button-wrapper {

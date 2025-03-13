@@ -1,40 +1,20 @@
-import React from "react";
+import React, { useMemo } from "react";
 import "./Users.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { useNavigate } from "react-router-dom";
 import ButtonItem from "./ButtonItem";
 
-import main_user from "../assets/main-user.png";
 import add from "../assets/add.svg";
 import { emojis } from "../config/emojis";
+import { useSelector } from "react-redux";
 
-const config = [
-  {},
-  {},
-  {},
-  {},
-  {},
-  {},
-  {},
-  {},
-  {},
-  {},
-  {},
-  {},
-  {},
-  {},
-  {},
-  {},
-  {},
-  {},
-].map((item) => {
-  item.emoji = emojis[Math.floor(Math.random() * emojis.length)];
-  return item;
-});
+const mainEmoji = emojis[Math.floor(Math.random() * emojis.length)];
 
 const Users = () => {
   const navigate = useNavigate();
+  const users = useSelector((s) => s.users);
 
+  console.log(users);
   return (
     <section className="users">
       <Swiper
@@ -42,21 +22,6 @@ const Users = () => {
         spaceBetween={"10px"}
         slidesPerView={"auto"}
       >
-        {config.map(({ emoji }, index) => {
-          if (index == 0) {
-            return (
-              <SwiperSlide className="users__item" key={index}>
-                <ButtonItem active={true}>{emoji}</ButtonItem>
-              </SwiperSlide>
-            );
-          }
-          return (
-            <SwiperSlide className="users__item" key={index}>
-              <ButtonItem>{emoji}</ButtonItem>
-            </SwiperSlide>
-          );
-        })}
-
         <SwiperSlide className="users__item">
           <button
             className="users__button"
@@ -65,9 +30,23 @@ const Users = () => {
             <img className="users__add" src={add} />
           </button>
         </SwiperSlide>
+        {users.map((item, index) => {
+          if (index == 0) {
+            return (
+              <SwiperSlide className="users__item" key={index}>
+                <ButtonItem active={true}>{item}</ButtonItem>
+              </SwiperSlide>
+            );
+          }
+          return (
+            <SwiperSlide className="users__item" key={index}>
+              <ButtonItem>{item}</ButtonItem>
+            </SwiperSlide>
+          );
+        })}
       </Swiper>
       <button className="users__main">
-        <img className="users__photo" src={main_user} />
+        <ButtonItem>{mainEmoji}</ButtonItem>
       </button>
     </section>
   );

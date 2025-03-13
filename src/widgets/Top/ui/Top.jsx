@@ -1,16 +1,20 @@
 import React, { useState } from "react";
 import Button from "../../../shared/ui/Button/Button";
-import DateC from "./Date";
-import {  useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { DateCalendar } from "../../../features/DateCalendar";
 
 import "./Top.css";
+import { addItem } from "../../../features/Users";
+import { useDispatch } from "react-redux";
 
 const Top = () => {
   const [value, setValue] = useState(new Date(2003, 1, 1));
+  const dispatch = useDispatch()
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate('matrix-of-fate?_date=' + value.toDateString());
+    dispatch(addItem());
+    navigate("matrix-of-fate?_date=" + value.toDateString());
   };
   return (
     <section className="top">
@@ -25,7 +29,12 @@ const Top = () => {
             руководство по раскрытию своего потенциала
           </p>
           <div className="top__wrapper">
-            <DateC value={value} setValue={setValue} />
+            <DateCalendar
+              value={value}
+              setValue={setValue}
+              wrapperClass={"top__date"}
+              buttonClass={"top__date-button"}
+            />
             <div className="top__button-wrapper">
               <Button className={"top__button"} onClick={handleClick}>
                 Разгадать судьбу

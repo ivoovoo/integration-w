@@ -5,6 +5,7 @@
 html, body {
     overscroll-behavior: none;
 }
+
 body {
     font-family: "Open Sans";
 }
@@ -49,15 +50,7 @@ body {
     max-width: 1380px;
 }
 
-.calendar {
-    min-width: 280px;
-    position: absolute;
-    color: #444;
-    z-index: 20;
-    bottom: -15px;
-    left: 50%;
-    transform: translate(-50%,100%);
-}
+
 
 @media (max-width:1350px) {
     .row {
@@ -69,8 +62,6 @@ body {
         padding: 0 20px;
         margin: 0 auto;
     }
-
-
 }
 
 @media (max-width:1100px) {
@@ -92,8 +83,3 @@ body {
     }
 }
 
-@media (max-width:480px) {
-    .calendar {
-        min-width: 220px;
-    }
-}

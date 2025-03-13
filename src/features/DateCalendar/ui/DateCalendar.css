@@ -1,0 +1,21 @@
+.date {
+    position: relative;
+}
+
+
+.date__calendar {
+    min-width: 280px;
+    position: absolute;
+    color: #444;
+    z-index: 20;
+    bottom: -5px;
+    left: 50%;
+    transform: translate(-50%,100%);
+    border-radius: 15px;
+}
+
+@media (max-width:480px) {
+    .date__calendar {
+        min-width: 220px;
+    }
+}
