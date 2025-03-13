@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { useNavigate } from "react-router-dom";
 import ButtonItem from "./ButtonItem";
 
-import add from "../assets/add.svg";
+import {ReactComponent as Add} from "../assets/add.svg";
 import { emojis } from "../config/emojis";
 import { useSelector } from "react-redux";
 
@@ -19,7 +19,12 @@ const Users = () => {
     <section className="users">
       <Swiper
         className="users__all"
-        spaceBetween={"10px"}
+        spaceBetween={"5px"}
+        breakpoints={{
+          768: {
+            spaceBetween:'10px'
+          }
+        }}
         slidesPerView={"auto"}
       >
         <SwiperSlide className="users__item">
@@ -27,7 +32,7 @@ const Users = () => {
             className="users__button"
             onClick={() => navigate("/?date=open")}
           >
-            <img className="users__add" src={add} />
+            <Add className='users__add' />
           </button>
         </SwiperSlide>
         {users.map((item, index) => {

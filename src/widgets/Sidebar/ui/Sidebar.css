@@ -50,8 +50,8 @@
 
     .sidebar {
         bottom: 10px;
-        left: 1%;
-        width: 98%;
+        left: .2%;
+        width: 99.8%;
         min-height: auto;
         z-index: 100;
         padding: 10px;
@@ -130,4 +130,3 @@
 }
 
 
-@media (max-width:480px) {}

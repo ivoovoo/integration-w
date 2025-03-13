@@ -59,14 +59,15 @@
 }
 
 @media (max-width:768px) {
-    .users__photo {
-        width: 40.64px;
-        height: 40.64px;
+    .users__item {
+        max-width: 40.64px;
+        max-height: 40.64px;
     }
 
     .users__button {
         width: 40.64px;
         height: 40.64px;
+        font-size: 18px;
     }
 
 }
