@@ -279,7 +279,7 @@
     }
 
     .num-bottom-left-2 {
-        bottom: 22.8%;
+        bottom: 23%;
     }
 
     .num-bottom-right-1 {
@@ -287,7 +287,7 @@
     }
 
     .num-bottom-right-2 {
-        bottom: 22.8%;
+        bottom: 23%;
         left: 71.8%;
     }
 
@@ -300,6 +300,23 @@
         right: 17.6%;
     }
 
+    .num-center-2 {
+        top: 44.5%;
+    }
+
+    .num-bottom-3 {
+        bottom: 19.8%;
+    }
+
+    .num-top-left-2,
+    .num-top-right-2 {
+        top: 20%;
+    }
+
+    .num-top-left-3,
+    .num-top-right-3 {
+        top: 25%;
+    }
 }
 
 @media (max-width:390px) {
