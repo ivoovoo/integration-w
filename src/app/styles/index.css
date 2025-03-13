@@ -8,12 +8,12 @@ html, body {
 
 body {
     font-family: "Open Sans";
+    min-height: 100vh;
 }
 
 
 
 .app {
-    min-height: 100vh;
     background-color: var(--page-background);
     color: var(--primary-color);
 }
