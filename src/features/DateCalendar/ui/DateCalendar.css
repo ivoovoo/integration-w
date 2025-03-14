@@ -10,8 +10,13 @@
     z-index: 20;
     bottom: -5px;
     left: 50%;
-    transform: translate(-50%,100%);
+    transform: translate(-50%, 100%);
     border-radius: 15px;
+}
+
+
+.react-calendar__navigation button {
+    visibility: visible;
 }
 
 @media (max-width:480px) {
