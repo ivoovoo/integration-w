@@ -1,12 +1,22 @@
+import { useLocation } from "react-router-dom";
 import { AppRouter } from "./router";
 import "./styles/index.css";
+import { useEffect } from "react";
 
 function App() {
-  document.addEventListener("scroll", function () {
-    if (window.scrollY < 0) {
-      window.scrollTo(0, 0);
-    }
-  });
+  
+  const { pathname } = useLocation();
+  useEffect(() => {
+    document.addEventListener("scroll", function () {
+      if (window.scrollY < 0) {
+        window.scrollTo(0, 0);
+      }
+    });
+  }, []);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
   return (
     <div className="app dark">

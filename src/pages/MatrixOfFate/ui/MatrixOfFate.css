@@ -74,7 +74,7 @@
 
 .fate__scheme {
     margin-top: 44.28px;
-    padding: 30px;
+    padding: 40px;
 }
 
 @media (max-width:1500px) {
@@ -125,5 +125,9 @@
 
     .fate__title.title {
         font-size: 25px;
+    }
+
+    .fate__scheme {
+        padding: 0;
     }
 }

@@ -10,7 +10,7 @@ const Footer = () => {
     <footer className='footer'>
         <div className="container">
             <Navigation />
-            <Socials />
+            {/* <Socials /> */}
             <p className='footer__copyright'>{date.getFullYear()} &copy; ИНТЕГРАЦИЯ судьбы</p>
         </div>
     </footer>

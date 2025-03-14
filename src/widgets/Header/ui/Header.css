@@ -54,7 +54,7 @@
     font-size: 20px;
 }
 
-.header__call {
+.header__right-button {
     padding: 12px 68.5px;
     border-radius: 31px;
     box-sizing: border-box;
@@ -122,7 +122,7 @@
         font-size: 18px;
     }
 
-    .header__call {
+    .header__right-button {
         font-size: 15px;
     }
 
@@ -166,7 +166,7 @@
         gap: 20px;
     }
 
-    .header__call {
+    .header__right-button {
         order: 1;
     }
 

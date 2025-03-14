@@ -43,9 +43,9 @@ const Header = () => {
             Интеграция
           </Link>
           <Navigation />
-          <a className="header__call" href="tell:">
-            Позвонить
-          </a>{" "}
+          <Link className="header__right-button"  to={'matrix-of-fate'}>
+            Рассчитать слово
+          </Link>{" "}
           <ThemeSwitcher />
           <button className="header__menu-close" ref={closeRef}>
             <Sprite width={40} height={40} icon="close" />

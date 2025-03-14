@@ -1,32 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { links } from "../config/links";
 
-const links = [
-  {
-    path: "/",
-    children: "Главная",
-  },
-  {
-    path: "/d",
-    children: "О нас",
-  },
-  {
-    path: "/matrix-of-fate",
-    children: "Матрица",
-  },
-  {
-    path: "/z",
-    children: "Отзывы",
-  },
-  {
-    path: "/c",
-    children: "Контакты",
-  },
-];
 
 const Navigation = () => {
   
-
   return (
 
         <nav className="header__nav">
