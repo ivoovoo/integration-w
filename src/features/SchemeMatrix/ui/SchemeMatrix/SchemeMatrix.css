@@ -43,22 +43,9 @@
 @media (max-width:768px) {
 
     .scheme-matrix__circle div {
-        font-size: 12px;
-    }
-
-
-    .scheme-matrix {
-        width: 350px;
-        height: 350px;
-    }
-}
-
-
-@media (max-width:480px) {
-
-    .scheme-matrix__circle div {
         font-size: 8px;
     }
+
 
     .scheme-matrix__circle .scheme-matrix__year {
         font-size: 2px;
@@ -69,5 +56,16 @@
     .scheme-matrix__circle .scheme-matrix--fz {
         font-size: 4px;
     }
+    .scheme-matrix {
+        width: 350px;
+        height: 350px;
+    }
+}
+
+
+@media (max-width:480px) {
+
+   
+
 
 }
