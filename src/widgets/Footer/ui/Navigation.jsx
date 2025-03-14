@@ -5,7 +5,7 @@ import { links } from '../config/links'
 const Navigation = () => {
   return (
     <nav className='footer__nav'>
-       {links.map(({path, children }) => (<Link className='footer__link' path={path} to={path}>{children}</Link>))}
+       {links.map(({path, children }) => (<Link className='footer__link' key={path} path={path} to={path}>{children}</Link>))}
     </nav>
   )
 }

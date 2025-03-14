@@ -10,7 +10,6 @@ const ListButton = ({ children, active, block, handleClick }) => {
       {block && <Sprite icon="block-icon" width={25} height={24} />}
     </>
   );
-  console.log(handleClick)
   return (
     <>
       {active ? (
