@@ -43,13 +43,14 @@
 }
 
 .decoding__button {
-    min-width: 312px;
+    width: 312px;
     min-height: 58px;
     text-align: start;
     padding: 0 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 0 10px;
 
 }
 

@@ -1,45 +1,36 @@
-import React from "react";
-import Button from "../../../shared/ui/Button/Button";
-import InactiveButton from "../../../shared/ui/InactiveButton/IntactiveButton";
-import Sprite from "../../../shared/ui/Sprite/Sprite";
+import React, { useState } from "react";
 import ListButton from "./ListButton";
+import { buttons } from "../config/buttons";
 
 const List = () => {
+  const [listButtons, setListButtons] = useState(buttons);
+
+  const handleClick = (i) => {
+    const newListButtons = listButtons.map((item, index) => {
+      if (i == index) {
+        item.active = true;
+      } else {
+        item.active = false;
+      }
+
+      return item;
+    });
+
+    console.log('ssads')
+    setListButtons(newListButtons);
+  };
   return (
     <div className="decoding__list">
-      <ListButton active={true}>Визитная карточка</ListButton>
-      <ListButton>
-        Карма прошлого <br /> воплощения
-      </ListButton>
-      <ListButton block={true}>Главная проработка души</ListButton>
-      <ListButton block={true}>Задача души до 40 лет</ListButton>
-      <ListButton>Отношения</ListButton>
-      <ListButton>Деньги</ListButton>
-      <ListButton block={true}>Точка душевного комфорта</ListButton>
-      <ListButton>Родовые значения</ListButton>
-      <ListButton>Деньги</ListButton>
-      <ListButton>Деньги</ListButton>
-      <ListButton>Деньги</ListButton>
-      <ListButton>Деньги</ListButton>
-      <ListButton>Деньги</ListButton>
-      <ListButton>Деньги</ListButton>
-      <ListButton>Деньги</ListButton>
-      <ListButton>Деньги</ListButton>
-      <ListButton>Деньги</ListButton>
-      <ListButton>Деньги</ListButton>
-      <ListButton>Деньги</ListButton>
-      <ListButton>Деньги</ListButton>
-      <ListButton>Деньги</ListButton>
-      <ListButton>Деньги</ListButton>
-      <ListButton>Деньги</ListButton>
-      <ListButton>Деньги</ListButton>
-      <ListButton>Деньги</ListButton>
-      <ListButton>Деньги</ListButton>
-      <ListButton>Деньги</ListButton>
-      <ListButton>Деньги</ListButton>
-      <ListButton>Деньги</ListButton>
-      <ListButton>Деньги</ListButton>
-      <ListButton>Деньги</ListButton>
+      {listButtons.map((item, index) => (
+        <ListButton
+          key={item.value}
+          active={item.active}
+          block={item.block}
+          handleClick={() => handleClick(index)}
+        >
+          {item.value}
+        </ListButton>
+      ))}
     </div>
   );
 };

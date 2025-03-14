@@ -3,6 +3,8 @@
     margin: 0 auto;
     font-family: 'Futura';
     font-weight: 500;
+    width: 544px;
+    height: 544px;
 }
 
 .scheme-matrix__circle div {
@@ -44,6 +46,11 @@
         font-size: 12px;
     }
 
+
+    .scheme-matrix {
+        width: 350px;
+        height: 350px;
+    }
 }
 
 

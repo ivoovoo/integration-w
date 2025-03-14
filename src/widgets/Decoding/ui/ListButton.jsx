@@ -1,21 +1,22 @@
 import React from "react";
 import Button from "../../../shared/ui/Button/Button";
-import InactiveButton from "../../../shared/ui/InactiveButton/IntactiveButton";
+import InactiveButton from "../../../shared/ui/InactiveButton/InactiveButton";
 import Sprite from "../../../shared/ui/Sprite/Sprite";
 
-const ListButton = ({ children, active, block }) => {
+const ListButton = ({ children, active, block, handleClick }) => {
   const content = (
     <>
       {children}
       {block && <Sprite icon="block-icon" width={25} height={24} />}
     </>
   );
+  console.log(handleClick)
   return (
     <>
       {active ? (
-        <Button className={"decoding__button decoding__button--active"}>{content}</Button>
+        <Button onClick={handleClick} className={"decoding__button decoding__button--active"}>{content}</Button>
       ) : (
-        <InactiveButton className={"decoding__button"}>
+        <InactiveButton onClick={handleClick} className={"decoding__button"}>
           {content}
         </InactiveButton>
       )}

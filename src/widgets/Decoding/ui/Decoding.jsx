@@ -1,8 +1,8 @@
 import React from "react";
-
-import "./Decoding.css";
 import List from "./List";
 import Quality from "./Quality";
+
+import "./Decoding.css";
 
 const Decoding = () => {
   return (
