@@ -17,6 +17,7 @@ const usersSlice = createSlice({
       const newUser = {
         active: true,
         date: action.payload.date,
+        name: action.payload.name || '',
         emoji: emojis[Math.floor(Math.random() * emojis.length)],
       };
 

@@ -6,9 +6,9 @@ import { links } from "../config/links";
 
 import "./Sidebar.css";
 
-const Sidebar = () => {
+const Sidebar = ({className}) => {
   return (
-    <div className="sidebar">
+    <div className={classNames("sidebar", [className])}>
       <h2 className="sidebar__title">Интеграция</h2>
       <nav className="sidebar__links">
         {links.map(({ icon, path, value, display, mobile }) => (

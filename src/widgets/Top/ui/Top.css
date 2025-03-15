@@ -144,13 +144,18 @@
         padding: 110px 0 56px;
     }
 
-
-    .top__wrapper {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 20px;
+    .top__button,
+    .top__date-button {
+        min-width: 180px;
+        width: 180px;
+        font-size: 16px;
+        padding: 20px 0;
     }
 
+    .top .date__calendar {
+        transform: translateY(100%);
+        left: 0;
+    }
 
 }
 
@@ -168,5 +173,13 @@
 
     .top__text {
         font-size: 15px;
+    }
+
+    .top__button,
+    .top__date-button {
+        min-width: 120px;
+        width: 120px;
+        font-size: 13px;
+        padding: 14px 0;
     }
 }

@@ -7,6 +7,7 @@ import { Matrix } from "../../../widgets/Matrix";
 import { Tariffs } from "../../../widgets/Tariffs";
 import { Reviews } from "../../../widgets/Reviews";
 import { Footer } from "../../../widgets/Footer";
+import { Sidebar } from "../../../widgets/Sidebar";
 
 const MainPage = () => {
   return (
@@ -18,6 +19,7 @@ const MainPage = () => {
       <Matrix />
       <Tariffs />
       <Reviews />
+      <Sidebar  className='homepage'/>
       <Footer />
     </>
   );
