@@ -10,7 +10,7 @@ const Form = () => {
     : new Date(2003, 1, 1);
 
   const dispatch = useDispatch();
-  const [name, setName] = useState(active.name);
+  const [name, setName] = useState(active?.name);
   const [date, setDate] = useState(initialDate);
 
   useEffect(() => {
