@@ -9,12 +9,12 @@ import { useDispatch } from "react-redux";
 
 const Top = () => {
   const [value, setValue] = useState(new Date(2003, 1, 1));
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
   const navigate = useNavigate();
 
   const handleClick = () => {
-    dispatch(addItem());
-    navigate("matrix-of-fate?_date=" + value.toDateString());
+    dispatch(addItem({ date: value.toDateString() }));
+    navigate("matrix-of-fate");
   };
   return (
     <section className="top">

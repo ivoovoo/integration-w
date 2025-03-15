@@ -3,14 +3,44 @@ import { emojis } from "../config/emojis";
 
 const usersSlice = createSlice({
   name: "USERS",
-  initialState: [],
+  initialState: {
+    data: [],
+    active: null,
+  },
   reducers: {
     addItem: (state, action) => {
-      state.push(emojis[Math.floor(Math.random() * emojis.length)]);
+      state.data = state.data.map((item) => ({
+        ...item,
+        active: false,
+      }));
+
+      const newUser = {
+        active: true,
+        date: action.payload.date,
+        emoji: emojis[Math.floor(Math.random() * emojis.length)],
+      };
+
+      state.data.unshift(newUser);
+      state.active = newUser;
+
+      return state;
+    },
+    changeActive: (state, action) => {
+      const i = action.payload;
+      state.data = state.data.map((item, index) => {
+        if (index == i) {
+          state.active = item;
+        }
+        return {
+          ...item,
+          active: i === index,
+        };
+      });
+
       return state;
     },
   },
 });
 
 export default usersSlice.reducer;
-export const { addItem } = usersSlice.actions;
+export const { addItem, changeActive } = usersSlice.actions;

@@ -7,19 +7,37 @@ import "react-calendar/dist/Calendar.css";
 import "./DateCalendar.css";
 
 
-
-const DateCalendar = ({ wrapperClass = "", buttonClass = "", value, setValue, children }) => {
-  const dateRef = useRef()
+const DateCalendar = ({
+  wrapperClass = "",
+  buttonClass = "",
+  value,
+  setValue,
+  children,
+}) => {
+  const dateRef = useRef();
   const [show, setShow] = useState(false);
   const toggleShow = () => {
     setShow((prev) => !prev);
   };
+
   return (
     <div className={classNames("date", [wrapperClass])} ref={dateRef}>
-      <button className={classNames("date__button", [buttonClass])} onClick={toggleShow}>
+      <button
+        className={classNames("date__button", [buttonClass])}
+        onClick={toggleShow}
+        type="button"
+      
+      >
         {value ? getDateString(value) : children}
       </button>
-      {show && <CalendarMain setShow={setShow} setValue={setValue} value={value}  dateRef={dateRef}/>}
+      {show && (
+        <CalendarMain
+          setShow={setShow}
+          setValue={setValue}
+          value={value}
+          dateRef={dateRef}
+        />
+      )}
     </div>
   );
 };
